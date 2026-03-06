@@ -168,7 +168,8 @@
             transition: transform 0.5s ease;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            object-position: center;
         }
 
         .image-frame:hover img {
@@ -618,6 +619,7 @@
         }
 
         /* ===== RESPONSIVE ===== */
+        /* Large Tablets and Small Desktops */
         @media (max-width: 1024px) {
             .card {
                 grid-template-columns: 1fr;
@@ -649,11 +651,16 @@
             .buttons-container {
                 gap: 15px;
             }
+
+            h1 {
+                font-size: 3rem;
+            }
         }
 
+        /* Tablets */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
             }
 
             .subtitle {
@@ -669,18 +676,37 @@
             }
 
             .gallery-cards {
-                gap: 60px;
+                gap: 50px;
             }
 
-            .frame-heart,
-            .frame-circle,
-            .frame-rounded-rect,
-            .frame-diamond,
-            .frame-octagon,
+            .frame-heart {
+                width: 280px;
+                height: 300px;
+            }
+
+            .frame-circle {
+                width: 280px;
+                height: 280px;
+            }
+
+            .frame-rounded-rect {
+                width: 280px;
+                height: 320px;
+            }
+
+            .frame-diamond {
+                width: 260px;
+                height: 340px;
+            }
+
+            .frame-octagon {
+                width: 280px;
+                height: 280px;
+            }
+
             .frame-star {
-                width: 100%;
-                height: auto;
-                max-width: 300px;
+                width: 280px;
+                height: 280px;
             }
 
             .message-box {
@@ -690,37 +716,272 @@
 
             .message-title {
                 font-size: 1.2rem;
+                margin-bottom: 12px;
+            }
+
+            .message-text {
+                font-size: 0.95rem;
+                line-height: 1.6;
             }
 
             .final-section {
-                padding: 50px 30px;
+                padding: 50px 25px;
             }
 
             .final-section h2 {
-                font-size: 2rem;
+                font-size: 2.5rem;
+                margin-bottom: 15px;
+            }
+
+            .final-section p {
+                font-size: 1rem;
             }
 
             .romantic-question {
-                padding: 50px 30px;
+                padding: 50px 25px;
                 min-height: 350px;
             }
 
             .romantic-question h2 {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
                 margin-bottom: 40px;
             }
 
             .btn-yes, .btn-no {
-                padding: 12px 35px;
+                padding: 12px 30px;
                 font-size: 0.85rem;
             }
 
             .buttons-container {
-                gap: 10px;
+                gap: 12px;
+                padding: 20px;
             }
 
             footer {
                 padding: 40px 20px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Small Phones */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 0.9rem;
+                letter-spacing: 2px;
+            }
+
+            header {
+                padding: 30px 15px;
+            }
+
+            .main-container {
+                padding: 20px 15px;
+            }
+
+            .gallery-cards {
+                gap: 40px;
+            }
+
+            .frame-heart {
+                width: 100%;
+                max-width: 250px;
+                height: 270px;
+            }
+
+            .frame-circle {
+                width: 100%;
+                max-width: 250px;
+                height: 250px;
+            }
+
+            .frame-rounded-rect {
+                width: 100%;
+                max-width: 250px;
+                height: 290px;
+            }
+
+            .frame-diamond {
+                width: 100%;
+                max-width: 230px;
+                height: 300px;
+            }
+
+            .frame-octagon {
+                width: 100%;
+                max-width: 250px;
+                height: 250px;
+            }
+
+            .frame-star {
+                width: 100%;
+                max-width: 250px;
+                height: 250px;
+            }
+
+            .message-box {
+                padding: 20px 15px;
+                font-size: 0.85rem;
+                margin-bottom: 20px;
+            }
+
+            .message-title {
+                font-size: 1.1rem;
+                margin-bottom: 10px;
+            }
+
+            .message-text {
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+
+            .message-box::before {
+                font-size: 2.5rem;
+                top: -10px;
+                left: 5px;
+            }
+
+            .final-section {
+                padding: 40px 20px;
+            }
+
+            .final-section h2 {
+                font-size: 2rem;
+                margin-bottom: 12px;
+            }
+
+            .final-section p {
+                font-size: 0.95rem;
+                margin-bottom: 10px;
+            }
+
+            .final-section .special-message {
+                font-size: 1.1rem;
+                margin-top: 15px;
+            }
+
+            .romantic-question {
+                padding: 40px 20px;
+                min-height: 300px;
+                margin-top: 60px;
+            }
+
+            .romantic-question h2 {
+                font-size: 2rem;
+                margin-bottom: 30px;
+            }
+
+            .btn-yes, .btn-no {
+                padding: 11px 28px;
+                font-size: 0.8rem;
+                letter-spacing: 1px;
+            }
+
+            .buttons-container {
+                gap: 10px;
+                padding: 15px;
+                min-height: 80px;
+            }
+
+            footer {
+                padding: 30px 15px;
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Extra Small Phones */
+        @media (max-width: 360px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .subtitle {
+                font-size: 0.8rem;
+                letter-spacing: 1.5px;
+            }
+
+            header {
+                padding: 25px 12px;
+            }
+
+            .main-container {
+                padding: 15px 12px;
+            }
+
+            .gallery-cards {
+                gap: 30px;
+            }
+
+            .frame-heart,
+            .frame-circle,
+            .frame-rounded-rect,
+            .frame-diamond,
+            .frame-octagon,
+            .frame-star {
+                width: 100%;
+                max-width: 220px;
+                height: auto;
+            }
+
+            .message-box {
+                padding: 15px 12px;
+                font-size: 0.8rem;
+                margin-bottom: 15px;
+            }
+
+            .message-title {
+                font-size: 1rem;
+                margin-bottom: 8px;
+            }
+
+            .message-text {
+                font-size: 0.85rem;
+                line-height: 1.4;
+            }
+
+            .final-section {
+                padding: 30px 15px;
+            }
+
+            .final-section h2 {
+                font-size: 1.8rem;
+                margin-bottom: 10px;
+            }
+
+            .final-section p {
+                font-size: 0.9rem;
+                margin-bottom: 8px;
+            }
+
+            .romantic-question {
+                padding: 30px 15px;
+                min-height: 280px;
+                margin-top: 50px;
+            }
+
+            .romantic-question h2 {
+                font-size: 1.8rem;
+                margin-bottom: 25px;
+            }
+
+            .btn-yes, .btn-no {
+                padding: 10px 22px;
+                font-size: 0.75rem;
+                letter-spacing: 0.5px;
+            }
+
+            .buttons-container {
+                gap: 8px;
+                padding: 12px;
+                min-height: 70px;
+            }
+
+            footer {
+                padding: 25px 12px;
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -744,7 +1005,7 @@
                     <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="fill: none; stroke: var(--gold); stroke-width: 2;">
                         <path d="M50,100 Q30,75 20,60 Q10,45 10,35 Q10,20 25,20 Q35,20 50,35 Q65,20 75,20 Q90,20 90,35 Q90,45 80,60 Q70,75 50,100"/>
                     </svg>
-                    <img src="Image1.jpeg" alt="Memory 1" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&h=600&fit=crop" alt="Memory 1" loading="lazy">
                 </div>
                 <div class="message-content">
                     <div class="message-box">
@@ -757,7 +1018,7 @@
             <!-- Card 2: CIRCLE FRAME -->
             <div class="card">
                 <div class="image-frame frame-circle">
-                    <img src="Image1.jpeg" alt="Memory 2" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=600&h=600&fit=crop" alt="Memory 2" loading="lazy">
                 </div>
                 <div class="message-content">
                     <div class="message-box">
@@ -937,8 +1198,4 @@
         document.head.appendChild(style);
     </script>
 </body>
-
 </html>
-
-
-
